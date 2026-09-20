@@ -36,7 +36,7 @@ app.get('/api/search', async (req, res) => {
     // Fetch page 1 first to discover total page count
     const firstPage = await axios.get(
       `https://demo.inelabteamdev.com/api/catalog?page=1&pageSize=${PAGE_SIZE}`,
-      { timeout: 10000, headers: { 'User-Agent': 'Mozilla/5.0' } }
+      { timeout: 10000, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Accept': 'application/json' } }
     );
 
     const totalPages = firstPage.data.pages || 1;
@@ -66,7 +66,7 @@ app.get('/api/search', async (req, res) => {
       const pageRequests = pageNums.map(p =>
         axios.get(
           `https://demo.inelabteamdev.com/api/catalog?page=${p}&pageSize=${PAGE_SIZE}`,
-          { timeout: 10000, headers: { 'User-Agent': 'Mozilla/5.0' } }
+          { timeout: 10000, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Accept': 'application/json' } }
         ).catch(() => null)
       );
 
