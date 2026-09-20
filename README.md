@@ -380,3 +380,4 @@ To record scraper behavior:
 ## 📄 License
 
 Project for INE Software Engineer Intern Assignment - September 2026
+#
