@@ -1,0 +1,25 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Debugging and scratch files
+*.html
+*.txt
+*.png
+!README.md
+!docs/*.md
+
+# Build outputs
+dist/
+build/
+.next/
+
+# OS files
+.DS_Store
+Thumbs.db
