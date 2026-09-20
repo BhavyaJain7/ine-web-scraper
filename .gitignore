@@ -10,6 +10,7 @@ yarn-error.log
 
 # Debugging and scratch files
 *.html
+!frontend/public/index.html
 *.txt
 *.png
 !README.md
